@@ -14,6 +14,8 @@
 		CE91AB26234330AA00142C66 /* Saving_Data_BayBeh.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE91AB24234330AA00142C66 /* Saving_Data_BayBeh.xcdatamodeld */; };
 		CE91AB28234330AB00142C66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE91AB27234330AB00142C66 /* Assets.xcassets */; };
 		CE91AB2B234330AB00142C66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE91AB29234330AB00142C66 /* LaunchScreen.storyboard */; };
+		CE9F984A2343632400B2BE0B /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F98492343632400B2BE0B /* PersistenceService.swift */; };
+		CE9F984D2343685300B2BE0B /* PersonTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F984C2343685300B2BE0B /* PersonTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		CE91AB27234330AB00142C66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE91AB2A234330AB00142C66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE91AB2C234330AB00142C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE9F98492343632400B2BE0B /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		CE9F984C2343685300B2BE0B /* PersonTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		CE91AB1A234330AA00142C66 /* Saving Data BayBeh */ = {
 			isa = PBXGroup;
 			children = (
+				CE9F984B2343680F00B2BE0B /* Model */,
 				CE91AB1B234330AA00142C66 /* AppDelegate.swift */,
 				CE91AB1D234330AA00142C66 /* SceneDelegate.swift */,
 				CE91AB1F234330AA00142C66 /* ViewController.swift */,
@@ -66,8 +71,17 @@
 				CE91AB29234330AB00142C66 /* LaunchScreen.storyboard */,
 				CE91AB2C234330AB00142C66 /* Info.plist */,
 				CE91AB24234330AA00142C66 /* Saving_Data_BayBeh.xcdatamodeld */,
+				CE9F98492343632400B2BE0B /* PersistenceService.swift */,
 			);
 			path = "Saving Data BayBeh";
+			sourceTree = "<group>";
+		};
+		CE9F984B2343680F00B2BE0B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE9F984C2343685300B2BE0B /* PersonTableView.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9F984A2343632400B2BE0B /* PersistenceService.swift in Sources */,
 				CE91AB20234330AA00142C66 /* ViewController.swift in Sources */,
+				CE9F984D2343685300B2BE0B /* PersonTableView.swift in Sources */,
 				CE91AB1C234330AA00142C66 /* AppDelegate.swift in Sources */,
 				CE91AB26234330AA00142C66 /* Saving_Data_BayBeh.xcdatamodeld in Sources */,
 				CE91AB1E234330AA00142C66 /* SceneDelegate.swift in Sources */,
