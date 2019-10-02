@@ -31,22 +31,30 @@ class ViewController: UIViewController {
             textField.keyboardType = .numberPad
         }
         
+        func inputAlert() {
+            let alert = UIAlertController(title: "Please enter both name and age", message: nil, preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default) { (_) in
+                
+            }
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+        }
+        
         let action = UIAlertAction(title: "Post", style: .default) { (_) in
             let name = alert.textFields?.first?.text
             let age = Int16((alert.textFields?.last?.text)!)
             
-            if name != nil, age != nil {
-                print(name!, age!)
-                let person = PersonTableView.init(name: name, age: age)
-                self.people.append(person)
-                self.tableView.reloadData()
-            } else {
-                let alert = UIAlertController(title: "Please enter both name and age", message: nil, preferredStyle: .alert)
-                let action = UIAlertAction(title: "OK", style: .default) { (_) in
-                    
+            if name != nil && name != "" {
+                if age != nil {
+                    print(name!, age!)
+                    let person = PersonTableView.init(name: name, age: age)
+                    self.people.append(person)
+                    self.tableView.reloadData()
+                } else {
+                    inputAlert()
                 }
-                alert.addAction(action)
-                self.present(alert, animated: true, completion: nil)
+            } else {
+                inputAlert()
             }
             
         }
