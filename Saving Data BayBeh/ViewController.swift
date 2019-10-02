@@ -7,18 +7,25 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var people:[PersonTableView] = []
+//    var people:[PersonTableView] = []
+    var people:[Person] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
+        
+        let fetchRequest: NSFetchRequest<Person> = Person.fetchRequest()
+        people = try! PersistenceService.context.fetch(fetchRequest)
+        
+        self.tableView.reloadData()
     }
     
     @IBAction func onPlusBtn() {
@@ -47,9 +54,19 @@ class ViewController: UIViewController {
             if name != nil && name != "" {
                 if age != nil {
                     print(name!, age!)
-                    let person = PersonTableView.init(name: name, age: age)
-                    self.people.append(person)
+                    // Core Data - Array Model Saving
+                    let person2 = Person(context: PersistenceService.context)
+                    person2.name = name
+                    person2.age = Int16(age!)
+                    PersistenceService.saveContext()
+                    
+                    self.people.append(person2)
                     self.tableView.reloadData()
+                    
+                    // Local Data - Array Model Saving
+//                    let person1 = PersonTableView.init(name: name, age: age)
+//                    self.people.append(person1)
+//                    self.tableView.reloadData()
                 } else {
                     inputAlert()
                 }
@@ -76,7 +93,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
         cell.textLabel?.text = self.people[indexPath.row].name
-        cell.detailTextLabel?.text = String(describing: self.people[indexPath.row].age!)
+        cell.detailTextLabel?.text = String(describing: self.people[indexPath.row].age)
         return cell
     }
 }

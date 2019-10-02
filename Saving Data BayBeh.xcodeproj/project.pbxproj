@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE7CF12B2344886500487736 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7CF1292344886500487736 /* Person+CoreDataClass.swift */; };
+		CE7CF12C2344886500487736 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7CF12A2344886500487736 /* Person+CoreDataProperties.swift */; };
 		CE91AB1C234330AA00142C66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91AB1B234330AA00142C66 /* AppDelegate.swift */; };
 		CE91AB1E234330AA00142C66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91AB1D234330AA00142C66 /* SceneDelegate.swift */; };
 		CE91AB20234330AA00142C66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91AB1F234330AA00142C66 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE7CF1292344886500487736 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE7CF12A2344886500487736 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CE91AB18234330AA00142C66 /* Saving Data BayBeh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Saving Data BayBeh.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE91AB1B234330AA00142C66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE91AB1D234330AA00142C66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 		CE9F984B2343680F00B2BE0B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CE7CF1292344886500487736 /* Person+CoreDataClass.swift */,
+				CE7CF12A2344886500487736 /* Person+CoreDataProperties.swift */,
 				CE9F984C2343685300B2BE0B /* PersonTableView.swift */,
 			);
 			path = Model;
@@ -156,8 +162,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9F984A2343632400B2BE0B /* PersistenceService.swift in Sources */,
+				CE7CF12B2344886500487736 /* Person+CoreDataClass.swift in Sources */,
 				CE91AB20234330AA00142C66 /* ViewController.swift in Sources */,
 				CE9F984D2343685300B2BE0B /* PersonTableView.swift in Sources */,
+				CE7CF12C2344886500487736 /* Person+CoreDataProperties.swift in Sources */,
 				CE91AB1C234330AA00142C66 /* AppDelegate.swift in Sources */,
 				CE91AB26234330AA00142C66 /* Saving_Data_BayBeh.xcdatamodeld in Sources */,
 				CE91AB1E234330AA00142C66 /* SceneDelegate.swift in Sources */,
